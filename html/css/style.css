@@ -144,9 +144,8 @@ h1 {
 .fetured__flex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin-top: 48px;
-  margin-bottom: 95px;
+  margin-bottom: 45px;
   gap: 30px;
 }
 
@@ -154,6 +153,18 @@ h1 {
   width: 360px;
   height: 581px;
   background-color: #f8f8f8;
+}
+
+.fetured__item__pic {
+  position: relative;
+}
+
+.fetured__item__pic:hover {
+  background-color: #3a3838;
+}
+
+.fetured__item__img:hover {
+  opacity: 14%;
 }
 
 .fetured__item__text {
@@ -179,12 +190,22 @@ h1 {
   color: #f16d7f;
 }
 
+.fetured__button__flex {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
 .fetured__button {
-  margin: auto;
   text-decoration: none;
   color: #f26376;
+  background-color: #fff;
   padding: 14px 38px;
   border: 1px solid #f26376;
+}
+.fetured__button:hover {
+  background-color: #f26376;
+  color: white;
 }
 
 .service {
@@ -252,10 +273,14 @@ h1 {
 .photo {
   display: flex;
   flex-direction: column;
-  align-items: start;
   width: 360px;
   margin: auto;
   margin-left: 0;
+}
+
+.photo__img {
+  display: flex;
+  justify-content: center;
 }
 
 .photo p {
@@ -307,6 +332,10 @@ h1 {
   border: none;
 }
 
+.subscribe__input:focus {
+  outline: 0;
+}
+
 .subscribe__button {
   font-size: 14px;
   line-height: 17px;
@@ -316,6 +345,10 @@ h1 {
   background-color: #f16d7f;
   border-radius: 0 50px 50px 0;
   margin-left: -3px;
+}
+
+.subscribe__button:hover {
+  background-color: #222224;
 }
 
 .social {
@@ -341,28 +374,24 @@ h1 {
   display: inline-block;
 }
 
+.social__item:not(:last-child) {
+  margin-right: 7px;
+}
+
 .social__link {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   width: 32px;
   height: 32px;
   background-position: center;
-  background-size: 15px 15px;
-  background-repeat: no-repeat;
   background-color: white;
-  margin-left: 7px;
+  color: #222224;
+  font-size: 18px;
 }
 
-.social__link__fb {
-  background-image: url(../img/Vector.svg);
-}
-
-.social__link__inst {
-  background-image: url(../img/Vector1.svg);
-}
-
-.social__link__pin {
-  background-image: url(../img/Vector2.svg);
-}
-.social__link__tw {
-  background-image: url(../img/Vector3.svg);
+.social__link:hover {
+  background-color: #f16d7f;
+  color: #ffffff;
 }
