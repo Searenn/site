@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/try.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
@@ -39,7 +39,7 @@
     </section>
     <section class="slider">
         <button class="slider__btn"> <i class="fas fa-chevron-left"></i> </button>
-        <img  class="slider__img" src="img/Layer42.png" alt="slide">
+        <div class="slider__img"><img  src="img/Layer42.png" alt="slide"></div>
         <button class="slider__btn"> <i class="fas fa-chevron-right"></i> </button>
     </section>
     <section class="description container">
@@ -47,7 +47,7 @@
             <h1>
                 WOMEN COLLECTION
             </h1>
-            <div class="line"></div>
+            <div class="description__line"></div>
             <h2>
                 MOSCHINO CHEAP AND CHIC
             </h2>
@@ -58,16 +58,17 @@
                 $561
             </p>
         </article>
+        <div class="description_border"></div>
         <nav>
             <div class="filter__product">
-                <ul class="filte__parameter">
+                <ul class="filter__parameter">
                     <li>QUANTITY</li>
                     <li>CHOOSE SIZE</li>
                     <li>CHOOSE COLOR</li>
                 </ul>
             </div>
         </nav>
-        <div class="cart__flex">
+        <div class="product-cart">
             <a class="add-to-cart" href="/">Add to Cart</a>
         </div>
     </section>
@@ -115,11 +116,8 @@
     <footer class="footer">
         <section class="footer__flex container">
             <section class="photo">
-                <div class="photo__img">
+                <div class="photo_img">
                     <img src="img/Intersect.png" alt="photo">
-                    <div class="overlay">
-                        <button class="btn__cart">Add to cart</button>
-                    </div>
                 </div>
                 <p>
                     “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“
@@ -137,7 +135,7 @@
         <div class="social">
             <div class="container social__flex">
                 <p>© 2021  Brand  All Rights Reserved.</p>
-                <div class="social__links">
+                <div>
                     <ul>
                         <li class="social__item"><a href="/" class="social__link" aria-label="Мы в фэйсбуке"><i class="fab fa-facebook-f"></i></a></li>
                         <li class="social__item"><a href="/" class="social__link" aria-label="Мы в инстаграме"><i class="fab fa-instagram"></i></a></li>

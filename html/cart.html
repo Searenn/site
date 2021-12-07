@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/try.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
@@ -29,19 +29,19 @@
             </div>
         </nav>
     </header>
-    <div class="arrivals">
-        <div class="arrivals__flex container">
-            <div class="arrivals__left">SHOPPING CART</div>
-        </div>
-    </div>
     <section>
+        <div class="arrivals">
+            <div class="arrivals__flex container">
+                <div class="arrivals__left">SHOPPING CART</div>
+            </div>
+        </div>
         <div class="cart">
             <div class="container cart__flex">
                 <div class="cart__left">
                     <div class="cart__cards">
                         <div class="cart__item">
                             <div>
-                                <img src="/img/cart1.png" alt="cart1">
+                                <img src="img/cart1.png" alt="cart1">
                             </div>
                             <div class="cart__text">
                                 <div>
@@ -73,24 +73,24 @@
                         </div>
                     </div>
                     <div class="cart__buttons">
-                        <div class="cart__btn">
-                            <a href="/">CLEAR SHOPPING CART</a>
+                        <div>
+                            <a href="/" class="cart__btn">CLEAR SHOPPING CART</a>
                         </div>
-                        <div class="cart__btn">
-                            <a href="/">CONTINUE SHOPPING</a>
+                        <div>
+                            <a href="/" class="cart__btn">CONTINUE SHOPPING</a>
                         </div>
                     </div>
                 </div>
                 <div class="cart__right">
                     <form action="/">
                         <p>SHIPPING ADRESS</p>
-                        <input type="text" placeholder="Canada">
-                        <input type="text" placeholder="State">
-                        <input type="number" placeholder="Postcode / Zip">
-                    </form>
+                        <input class="cart__input" type="text" placeholder="Canada">
+                        <input class="cart__input" type="text" placeholder="State">
+                        <input class="cart__input" type="number" placeholder="Postcode / Zip">
                         <div>
                             <a class="cart__form_button" href="/">GET A QUOTE</a>
                         </div>
+                    </form>
                     <div class="cart__buy">
                         <div class="cart__total cart__total_sub">
                             <p>SUB TOTAL</p>

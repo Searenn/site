@@ -64,8 +64,8 @@ h1 {
   line-height: 32px;
 }
 
-.lastword {
-  color: #f16d7f !important;
+.promo_lastword {
+  color: #f16d7f;
 }
 
 .category {
@@ -99,7 +99,7 @@ h1 {
   line-height: 30px;
 }
 
-.category__general .lastword {
+.category__general .promo_lastword {
   font-weight: 700;
   font-size: 24px;
 }
@@ -151,7 +151,6 @@ h1 {
 
 .fetured__item {
   width: 360px;
-  height: 581px;
   background-color: #f8f8f8;
 }
 
@@ -219,7 +218,7 @@ h1 {
 }
 
 .fetured__text {
-  padding: 24px 18px;
+  padding: 22px 18px;
 }
 
 .fetured__text p {
@@ -235,10 +234,12 @@ h1 {
   color: #000000;
 }
 
-.fetured_cost {
+.fetured__text p.fetured_cost {
+  font-weight: normal;
   font-size: 16px;
   line-height: 19px;
   color: #f16d7f;
+  margin: 0;
 }
 
 .fetured__button_flex {
@@ -654,7 +655,7 @@ details summary {
   color: #4d4d4d;
 }
 
-.line {
+.description__line {
   margin: 12px auto;
   width: 63px;
   border-bottom: 3px solid #ef5b70;
@@ -684,28 +685,9 @@ details summary {
   flex-grow: 1;
 }
 
-.filte__parameter {
-  display: flex;
-  justify-content: center;
-  list-style-image: url(../img/Vector4.svg);
-  direction: rtl;
-  font-size: 14px;
-  line-height: 17px;
-  color: #6f6e6e;
-}
-
-.filter__parameter li {
-  padding-right: 10px;
-}
-
-.filter__parameter li:not(last-child) {
-  margin-right: 38px;
-}
-
-.cart__flex {
+.product-cart {
   margin: auto;
   margin-top: 49px;
-  display: flex;
 }
 
 .add-to-cart {
