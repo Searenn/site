@@ -5,6 +5,20 @@
     font-family: lato, sans-serif;
 }
 
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
 .header {
     background: #222222;
     color: white;
@@ -45,24 +59,23 @@
 }
 
 .container {
+    display: flex;
     max-width: 1140px;
     padding: 0 10px;
     width: 100%;
     margin: 0 auto;
-    box-sizing: border-box;
 }
 
 .promo {
-    height: 764px;
-    background: F1E4E6;
     background-color: #f1e4e6;
 
     &__flex {
         display: flex;
-        height: 100%;
         align-items: center;
         justify-content: flex-end;
         background: url(../img/man.png) no-repeat -228px;
+        height: 95vh;
+        background-size: contain;
     }
 
     &__title {
@@ -150,6 +163,8 @@
 }
 
 .fetured {
+    display: flex;
+    flex-direction: column;
     margin-top: 96px;
     margin-bottom: 45px;
 
@@ -262,6 +277,7 @@
         &_flex {
             display: flex;
             justify-content: center;
+            margin-bottom: 95px;
         }
     }
 }
@@ -370,6 +386,7 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    flex-shrink: 0;
 
     &__flex {
         display: flex;
@@ -464,6 +481,7 @@
     background: #222224;
     min-height: 80px;
     display: flex;
+    align-items: center;
 
     &__flex {
         display: flex;
@@ -522,6 +540,8 @@
         font-size: 24px;
         line-height: 29px;
         color: #f16d7f;
+        display: flex;
+        align-items: center;
     }
 
     &__right {
@@ -529,6 +549,8 @@
         font-size: 14px;
         line-height: 17px;
         color: #636363;
+        display: flex;
+        align-items: center;
 
         &_last {
             color: #f16d7f;
@@ -885,6 +907,7 @@ details summary {
         background: white;
         text-decoration: none;
         color: #000000;
+        transition: .5s;
 
         &:hover {
             background: #222222;
@@ -1104,7 +1127,16 @@ details summary {
 }
 
 @media (max-width: 1140px) {
+    .promo {
+        &__flex {
+            height: 95vh;
+        }
+    }
+
     .fetured {
+        margin: auto;
+        display: flex;
+
         &__flex {
             gap: 30px;
             justify-content: center;
@@ -1156,10 +1188,9 @@ details summary {
 
 @media (max-width: 768px) {
     .promo {
-        max-height: 367px;
 
         &__flex {
-            background-origin: content-box;
+            max-height: 367px;
             background-size: contain;
             background-position: left;
         }
@@ -1193,12 +1224,11 @@ details summary {
             flex-direction: column;
             justify-content: center;
             padding-bottom: 70px;
-            padding-top: 50px;
         }
     }
 
     .photo {
-        margin: auto;
+        margin: 30px auto;
         padding-bottom: 60px;
     }
 
@@ -1211,10 +1241,7 @@ details summary {
         }
     }
 
-    .social {
-        padding-top: 40px;
-        padding-bottom: 10px;
-    }
+
 
     .registration {
         flex-direction: column;
@@ -1293,6 +1320,9 @@ details summary {
     }
 
     .social {
+        padding-top: 40px;
+        padding-bottom: 10px;
+
         &__flex {
             flex-direction: column-reverse;
 
@@ -1313,8 +1343,9 @@ details summary {
 
     .arrivals {
         &__flex {
-            flex-direction: column;
             align-items: center;
+            justify-content: center;
+            flex-direction: column;
         }
     }
 
@@ -1329,6 +1360,12 @@ details summary {
             justify-content: start;
             font-size: 12px;
             line-height: 14px;
+        }
+    }
+
+    .cart {
+        &__buttons {
+            gap: 5px;
         }
     }
 }

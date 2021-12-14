@@ -6,6 +6,27 @@
   font-family: lato, sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
 .header {
   background: #222222;
   color: white;
@@ -61,17 +82,16 @@
 }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   max-width: 1140px;
   padding: 0 10px;
   width: 100%;
   margin: 0 auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
 }
 
 .promo {
-  height: 764px;
-  background: F1E4E6;
   background-color: #f1e4e6;
 }
 
@@ -79,7 +99,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -87,6 +106,8 @@
       -ms-flex-pack: end;
           justify-content: flex-end;
   background: url(../img/man.png) no-repeat -228px;
+  height: 95vh;
+  background-size: contain;
 }
 
 .promo__title {
@@ -190,6 +211,13 @@
 }
 
 .fetured {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-top: 96px;
   margin-bottom: 45px;
 }
@@ -324,6 +352,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 95px;
 }
 
 .overlay {
@@ -451,6 +480,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
 }
 
 .footer__flex {
@@ -569,6 +600,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .social__flex {
@@ -650,6 +684,12 @@
   font-size: 24px;
   line-height: 29px;
   color: #f16d7f;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .arrivals__right {
@@ -657,6 +697,12 @@
   font-size: 14px;
   line-height: 17px;
   color: #636363;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .arrivals__right_last {
@@ -1096,6 +1142,8 @@ details summary {
   background: white;
   text-decoration: none;
   color: #000000;
+  -webkit-transition: .5s;
+  transition: .5s;
 }
 
 .cart__btn:hover {
@@ -1390,6 +1438,15 @@ details summary {
 }
 
 @media (max-width: 1140px) {
+  .promo__flex {
+    height: 95vh;
+  }
+  .fetured {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   .fetured__flex {
     gap: 30px;
     -webkit-box-pack: center;
@@ -1450,11 +1507,8 @@ details summary {
 }
 
 @media (max-width: 768px) {
-  .promo {
-    max-height: 367px;
-  }
   .promo__flex {
-    background-origin: content-box;
+    max-height: 367px;
     background-size: contain;
     background-position: left;
   }
@@ -1489,10 +1543,9 @@ details summary {
         -ms-flex-pack: center;
             justify-content: center;
     padding-bottom: 70px;
-    padding-top: 50px;
   }
   .photo {
-    margin: auto;
+    margin: 30px auto;
     padding-bottom: 60px;
   }
   .subscribe {
@@ -1501,10 +1554,6 @@ details summary {
   }
   .subscribe__input {
     width: 230px;
-  }
-  .social {
-    padding-top: 40px;
-    padding-bottom: 10px;
   }
   .registration {
     -webkit-box-orient: vertical;
@@ -1567,6 +1616,10 @@ details summary {
   .promo__title {
     padding: 0;
   }
+  .social {
+    padding-top: 40px;
+    padding-bottom: 10px;
+  }
   .social__flex {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -1583,13 +1636,16 @@ details summary {
     width: 100%;
   }
   .arrivals__flex {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
   }
   .slider__img {
     max-width: 360px;
@@ -1600,6 +1656,9 @@ details summary {
             justify-content: start;
     font-size: 12px;
     line-height: 14px;
+  }
+  .cart__buttons {
+    gap: 5px;
   }
 }
 /*# sourceMappingURL=try.css.map */
