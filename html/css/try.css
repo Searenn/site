@@ -12,6 +12,18 @@
   padding: 19px;
 }
 
+.header__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .header__flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -456,7 +468,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 360px;
+  max-width: 360px;
   margin: auto;
   margin-left: 0;
 }
@@ -673,7 +685,6 @@
   font-size: 14px;
   line-height: 17px;
   color: #000000;
-  width: 360px;
   background-color: #fff;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -698,13 +709,14 @@
 .filter__btn::after {
   content: url(../img/Vector5.svg);
   position: relative;
+  display: inline-block;
   margin-left: 11px;
 }
 
 .filter__content {
   position: absolute;
   background-color: #fff;
-  width: 360px;
+  min-width: 300px;
   left: 0;
   z-index: 1;
 }
@@ -821,7 +833,12 @@ details summary {
 }
 
 .slider__img {
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   overflow: hidden;
 }
 
@@ -907,7 +924,7 @@ details summary {
   text-align: center;
   color: #5e5e5e;
   margin: 48px auto 35px auto;
-  width: 560px;
+  max-width: 560px;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -1010,6 +1027,7 @@ details summary {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  max-width: 652px;
   width: 652px;
   height: 306px;
   -webkit-box-shadow: 17px 19px 24px rgba(0, 0, 0, 0.13);
@@ -1243,6 +1261,7 @@ details summary {
   display: flex;
   margin-top: 64px;
   margin-bottom: 96px;
+  gap: 20px;
 }
 
 .registration__form {
@@ -1265,7 +1284,6 @@ details summary {
   font-weight: 300;
   font-size: 13px;
   line-height: 16px;
-  /* identical to box height */
   color: #B1B1B1;
 }
 
@@ -1273,7 +1291,6 @@ details summary {
   font-weight: 300;
   font-size: 13px;
   line-height: 16px;
-  /* identical to box height */
   color: #B1B1B1;
 }
 
@@ -1281,7 +1298,6 @@ details summary {
   font-weight: 300;
   font-size: 13px;
   line-height: 16px;
-  /* identical to box height */
   color: #B1B1B1;
 }
 
@@ -1289,7 +1305,6 @@ details summary {
   font-weight: 300;
   font-size: 13px;
   line-height: 16px;
-  /* identical to box height */
   color: #B1B1B1;
 }
 
@@ -1352,6 +1367,7 @@ details summary {
 
 .registration__info li {
   list-style-image: url(/html/img/v.svg);
+  list-style-position: inside;
   margin-top: 16px;
 }
 
@@ -1375,10 +1391,61 @@ details summary {
 
 @media (max-width: 1140px) {
   .fetured__flex {
-    gap: 20px;
+    gap: 30px;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .registration__info {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .registration__form form {
+    max-width: 360px;
+  }
+  .cart__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .cart__left {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 65px;
+  }
+  .cart__buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 622px;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .cart__right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 15px;
   }
 }
 
@@ -1439,9 +1506,61 @@ details summary {
     padding-top: 40px;
     padding-bottom: 10px;
   }
+  .registration {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .registration__form {
+    margin: auto;
+  }
+  .registration__info {
+    margin: auto;
+    margin-top: 40px;
+  }
+  .cart__item {
+    max-width: 360px;
+    height: 188px;
+  }
+  .cart__item img {
+    height: 188px;
+  }
+  .cart__text {
+    padding: 15px;
+  }
+  .cart__text h3 {
+    font-size: 16px;
+    line-height: 19px;
+  }
+  .cart__specification {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .cart__btn {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 9px 17px;
+  }
+  .cart__buttons {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 20px;
+  }
 }
 
 @media (max-width: 590px) {
+  .header__item:not(:first-child) {
+    display: none;
+  }
+  .header__item:not(:last-child) {
+    margin: 0;
+    padding: 0;
+  }
   .promo__flex {
     background-image: none;
   }
@@ -1462,6 +1581,25 @@ details summary {
     display: -ms-flexbox;
     display: flex;
     width: 100%;
+  }
+  .arrivals__flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .slider__img {
+    max-width: 360px;
+  }
+  .filter__parameter {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    font-size: 12px;
+    line-height: 14px;
   }
 }
 /*# sourceMappingURL=try.css.map */
