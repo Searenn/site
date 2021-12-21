@@ -30,7 +30,7 @@ main {
 .header {
   background: #222222;
   color: white;
-  padding: 19px;
+  padding: 12px;
 }
 
 .header__left {
@@ -77,8 +77,75 @@ main {
   transition: .7s;
 }
 
+.header__item img {
+  cursor: pointer;
+}
+
 .header__item:not(:last-child) {
   margin-right: 33px;
+}
+
+#burger {
+  display: none;
+}
+
+#burger:checked ~ .header__nav {
+  display: block;
+}
+
+#burger:not(:checked) ~ .header__nav {
+  display: none;
+}
+
+.header__nav {
+  position: absolute;
+  top: 65px;
+  right: 0;
+}
+
+.nav {
+  width: 232px;
+  padding: 25px;
+  background: white;
+  height: calc(100vh - 65px);
+  overflow-y: scroll;
+}
+
+.nav__wrap {
+  position: relative;
+}
+
+.nav__wrap h2 {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: black;
+  margin-bottom: 25px;
+}
+
+.nav__wrap h3 {
+  font-size: 14px;
+  line-height: 17px;
+  color: #F16D7F;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.nav__close {
+  position: absolute;
+  cursor: pointer;
+  color: black;
+  right: -5px;
+  top: -5px;
+}
+
+.nav__item a {
+  text-decoration: none;
+  color: #6F6E6E;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+  margin-left: 22px;
 }
 
 .container {
@@ -92,7 +159,8 @@ main {
 }
 
 .promo {
-  background-color: #f1e4e6;
+  background: url(../img/man.png) no-repeat 25% #f1e4e6;
+  background-size: contain;
 }
 
 .promo__flex {
@@ -105,9 +173,7 @@ main {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  background: url(../img/man.png) no-repeat -228px;
-  height: 95vh;
-  background-size: contain;
+  height: calc(100vh - 65px);
 }
 
 .promo__title {
@@ -1507,10 +1573,11 @@ details summary {
 }
 
 @media (max-width: 768px) {
+  .promo {
+    background-position: left;
+  }
   .promo__flex {
     max-height: 367px;
-    background-size: contain;
-    background-position: left;
   }
   .category__flex {
     gap: 20px;
@@ -1603,14 +1670,10 @@ details summary {
 }
 
 @media (max-width: 590px) {
-  .header__item:not(:first-child) {
+  .header__item_2 {
     display: none;
   }
-  .header__item:not(:last-child) {
-    margin: 0;
-    padding: 0;
-  }
-  .promo__flex {
+  .promo {
     background-image: none;
   }
   .promo__title {

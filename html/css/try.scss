@@ -22,7 +22,7 @@ main {
 .header {
     background: #222222;
     color: white;
-    padding: 19px;
+    padding: 12px;
 
     &__left {
         display: flex;
@@ -53,8 +53,77 @@ main {
         }
     }
 
-    &__item:not(:last-child) {
-        margin-right: 33px;
+    &__item {
+        & img {
+            cursor: pointer;
+        }
+
+        &:not(:last-child) {
+            margin-right: 33px;
+        }
+    }
+}
+
+#burger {
+    display: none;
+
+    &:checked~.header__nav {
+        display: block;
+    }
+
+    &:not(:checked)~.header__nav {
+        display: none;
+    }
+}
+
+.header__nav {
+    position: absolute;
+    top: 65px;
+    right: 0;
+}
+
+.nav {
+    width: 232px;
+    padding: 25px;
+    background: white;
+    height: calc(100vh - 65px);
+    overflow-y: scroll;
+
+    &__wrap {
+        position: relative;
+
+        & h2 {
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 17px;
+            color: black;
+            margin-bottom: 25px;
+        }
+
+        & h3 {
+            font-size: 14px;
+            line-height: 17px;
+            color: #F16D7F;
+            margin-top: 20px;
+            margin-bottom: 12px;
+        }
+    }
+
+    &__close {
+        position: absolute;
+        cursor: pointer;
+        color: black;
+        right: -5px;
+        top: -5px;
+    }
+
+    &__item a {
+        text-decoration: none;
+        color: #6F6E6E;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 30px;
+        margin-left: 22px;
     }
 }
 
@@ -67,15 +136,14 @@ main {
 }
 
 .promo {
-    background-color: #f1e4e6;
+    background: url(../img/man.png) no-repeat 25% #f1e4e6;
+    background-size: contain;
 
     &__flex {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        background: url(../img/man.png) no-repeat -228px;
-        height: 95vh;
-        background-size: contain;
+        height: calc(100vh - 65px);
     }
 
     &__title {
@@ -1188,11 +1256,11 @@ details summary {
 
 @media (max-width: 768px) {
     .promo {
+        background-position: left;
 
         &__flex {
             max-height: 367px;
-            background-size: contain;
-            background-position: left;
+
         }
     }
 
@@ -1298,21 +1366,14 @@ details summary {
 
     .header {
         &__item {
-            &:not(:first-child) {
+            &_2 {
                 display: none;
-            }
-
-            &:not(:last-child) {
-                margin: 0;
-                padding: 0;
             }
         }
     }
 
     .promo {
-        &__flex {
-            background-image: none;
-        }
+        background-image: none;
 
         &__title {
             padding: 0;
