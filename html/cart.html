@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/try.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/53cceaf571.js" crossorigin="anonymous"></script>
+    <title>cart</title>
+</head>
+<body>
+    <header>
+        <nav class="header">
+            <div class="container header__flex">
+                <div class="header__left">
+                    <a class="header__logo" href="index.html">
+                        <img src="img/logo.png" alt="">
+                    </a>
+                    <a href="#"><img src="img/Forma11.svg" alt=""></a>
+                </div>
+                <div class="header__right">
+                    <input type="checkbox" id="burger">
+                    <label for="burger" class="header__item">
+                        <img src="img/Forma12.svg" alt="">
+                    </label>
+                    <nav class="header__nav nav">
+                        <div class="nav__wrap">
+                            <label class="nav__close" for="burger">X</label>
+                            <h2>MENU</h2>
+                            <h3>MAN</h3>
+                            <ul class="nav__list">
+                                <li class="nav__item"><a href="#" class="nav__link">Accessories</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Bags</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Denim</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">T-Shirts</a></li>                                
+                            </ul>
+                            <h3>WOMAN</h3>
+                            <ul class="nav__list">
+                                <li class="nav__item"><a href="#" class="nav__link">Accessories</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Jackets & Coats</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Polos</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">T-Shirts</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Shirts</a></li>                                
+                            </ul>
+                            <h3>KIDS</h3>
+                            <ul class="nav__list">
+                                <li class="nav__item"><a href="#" class="nav__link">Accessories</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Jackets & Coats</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Polos</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">T-Shirts</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Shirts</a></li>
+                                <li class="nav__item"><a href="#" class="nav__link">Bags</a></li>                                
+                            </ul>
+                        </div>
+                    </nav>
+                    <a href="Registration.html" class="header__item header__item_2"><img src="img/Forma13.svg" alt=""></a>
+                    <a href="cart.html" class="header__item header__item_2"><img src="img/Forma14.svg" alt=""></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="arrivals">
+            <div class="arrivals__flex container">
+                <div class="arrivals__left">SHOPPING CART</div>
+            </div>
+        </div>
+        <div class="cart">
+            <div class="container cart__flex">
+                <section class="cart__left">
+                    <div class="cart__cards">
+                        <div class="cart__item">
+                            <div>
+                                <img src="img/cart1.png" alt="cart1">
+                            </div>
+                            <div class="cart__text">
+                                <div>
+                                    <h3>MANGO  PEOPLE <br>T-SHIRT</h3>
+                                </div>
+                                <div class="cart__specification">
+                                    <p>Price: <span>$300</span></p>
+                                    <p>Color: Red</p>
+                                    <p>Size: Xl	</p>
+                                    <p>Quantity:</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart__item">
+                            <div>
+                                <img src="img/cart2.png" alt="cart2">
+                            </div>
+                            <div class="cart__text">
+                                <div>
+                                    <h3>MANGO  PEOPLE <br> T-SHIRT</h3>
+                                </div>
+                                <div class="cart__specification">
+                                    <p>Price: <span>$300</span></p>
+                                    <p>Color: Red</p>
+                                    <p>Size: Xl	</p>
+                                    <p>Quantity:</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cart__buttons">
+                        <div>
+                            <a href="#" class="cart__btn">CLEAR SHOPPING CART</a>
+                        </div>
+                        <div>
+                            <a href="#" class="cart__btn">CONTINUE SHOPPING</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="cart__right">
+                    <form action="/">
+                        <p>SHIPPING ADRESS</p>
+                        <input class="cart__input" type="text" placeholder="Canada">
+                        <input class="cart__input" type="text" placeholder="State">
+                        <input class="cart__input" type="number" placeholder="Postcode / Zip">
+                        <div>
+                            <a class="cart__form_button" href="#">GET A QUOTE</a>
+                        </div>
+                    </form>
+                    <div class="cart__buy">
+                        <div class="cart__total cart__total_sub">
+                            <p>SUB TOTAL</p>
+                            <div class="cart__cost">$900</div>
+                        </div>
+                        <div class="cart__total cart__total_grand">
+                            <p>GRAND TOTAL</p>
+                            <div class="cart__cost cart__cost_pink">$900</div>
+                        </div>
+                        <div class="cart__border"></div>
+                        <div>
+                            <a class="cart__buy_button" href="#">PROCEED TO CHECKOUT</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <section class="footer__flex container">
+            <section class="photo">
+                <div class="photo_img">
+                    <img src="img/Intersect.png" alt="photo">
+                </div>
+                <p>
+                    “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar purus condimentum“
+                </p>
+            </section>
+            <section class="subscribe">
+                <p class="subscribe_bold">SUBSCRIBE</p>
+                <p class="subscribe_normal">FOR OUR NEWLETTER AND PROMOTION</p>
+                <div class="subscribe__mail">
+                    <input class="subscribe__input" type="mail" placeholder="Enter Your Mail">
+                    <a href="#" class="subscribe__button">Subscribe</a>
+                </div>
+            </section>
+        </section>
+        <div class="social">
+            <div class="container social__flex">
+                <p>© 2021  Brand  All Rights Reserved.</p>
+                <div>
+                    <ul>
+                        <li class="social__item"><a href="#" class="social__link" aria-label="Мы в фэйсбуке"><i class="fab fa-facebook-f"></i></a></li>
+                        <li class="social__item"><a href="#" class="social__link" aria-label="Мы в инстаграме"><i class="fab fa-instagram"></i></a></li>
+                        <li class="social__item"><a href="#" class="social__link" aria-label="мы в пинтересте"><i class="fab fa-pinterest-p"></i></a></li>
+                        <li class="social__item"><a href="#" class="social__link" aria-label="мы в твиттере"><i class="fab fa-twitter"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
